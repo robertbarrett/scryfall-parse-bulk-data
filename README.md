@@ -31,6 +31,8 @@ See a sample record below:
 
 #NOTES:
 
-This is designed to run on small hardware, either an Amazon AWS tiny image, or a Raspberry Pi, where memory/CPU are finite. We stream the download of default-cards.json, and the parsing of it. Otherwise we can have memory issues. That's why I use ijson. If you have a lot of memory, you can replace ijson with the standard json library, which should run faster. Parsing the large default-cards.json file can take 10 minutes in this way. Go get a coffee. You only need to do this once per set.
+This is designed to run on small hardware, either an Amazon AWS tiny image, or a Raspberry Pi, where memory/CPU are finite. We stream the download of default-cards.json, and the parsing of it (we don't load it all into memory at the same time). Otherwise we can have memory issues. That's why I use ijson. If you have a lot of memory, you can replace ijson with the standard json library, which should run faster. Parsing the large default-cards.json file can take 10 minutes in this way. Go get a coffee. You only need to do this once per set.
+
+Note also, I do use the regular json library in other places. This is because for the smaller output file, json works fine (and ijson didn't, and I don't care to check why)
 
 In the future I'd like to set this up so my script updates the cardInfo.json file on this repo every night, so you can always just download my file, and not have to generate your own
