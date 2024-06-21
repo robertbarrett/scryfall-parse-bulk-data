@@ -2,7 +2,9 @@
 
 The purpose of this is to parse the bulk data provided by scryfall into a smaller json file.
 
-Scryfall offers a bulk data file, however for each MTG card there are many records. Each reprint of the card has it's own record. For my use cases this is not helpful.
+Scryfall offers a bulk data file, however for each MTG card there are many records. Each reprint of the card has it's own record. For my use cases this is not helpful. 
+
+For example, if you search scryfall for "Aven of Enduring Hope", there are two prints. The original from Hour of Devastation says it's available on Paper/MTGO, but not Arena. The reprint from Amonkhet Remastered says it's available on Arena, but not paper/MTGO. My one record will say the card is available on all 3.
 
 The script reads through the large file and creates another file (cardInfo.json) with one record with data for each card. I filter on each record that is either legal or banned in Commander. Scryfall has a large number of other records: tokens, un-sets, digital cards, etc. I filter out these. Not also it groups by name, so reskinned cards don't show up as a separate entry.
 
