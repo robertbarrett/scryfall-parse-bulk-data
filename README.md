@@ -10,13 +10,12 @@ The script reads through the large file and creates another file (cardInfo.json)
 
 See a sample record below:
 ```
-"Wall of Roots": {
-  "sets": ["f08", "prm", "p30a", "arc", "wc98", "mir", "ima", "ncc", "tsb"], 
-  "released_at": "1996-10-08", 
-  "price_usd": 0.18,
-  "legalitites": {"standard": "not_legal", "future": "not_legal", "historic": "not_legal", "timeless": "not_legal", "gladiator": "not_legal", "pioneer": "not_legal", "explorer": "not_legal", "modern": "legal", "legacy": "legal", "pauper": "legal", "vintage": "legal", "penny": "not_legal", "commander": "legal", "oathbreaker": "legal", "standardbrawl": "not_legal", "brawl": "not_legal", "alchemy": "not_legal", "paupercommander": "legal", "duel": "legal", "oldschool": "not_legal", "premodern": "legal", "predh": "legal"}, 
-  "games": ["mtgo", "paper"]
-}
+{"Fury Sliver": {
+ "sets": ["tsp", "sld", "tsr", "h09"],
+ "released_at": "2006-10-06",
+ "price_usd": 0.21,
+ "legalitites": {"legal": ["modern", "legacy", "vintage", "commander", "oathbreaker", "duel", "predh"], "banned": [], "restricted": ["paupercommander"], "not_legal": ["standard", "future", "historic", "timeless", "gladiator", "pioneer", "explorer", "pauper", "penny", "standardbrawl", "brawl", "alchemy", "oldschool", "premodern"]},
+ "games": ["mtgo", "paper"]}
 ```
 
 "Sets" is a list of sets the card appears in.
